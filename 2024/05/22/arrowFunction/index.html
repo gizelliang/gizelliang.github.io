@@ -28,10 +28,10 @@
 <meta property="og:description" content="JS直播箭頭函數預錄">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-05-21T16:29:24.000Z">
-<meta property="article:modified_time" content="2024-05-24T02:30:30.677Z">
+<meta property="article:modified_time" content="2024-05-24T03:10:25.344Z">
 <meta property="article:author" content="Fish">
-<meta property="article:tag" content="HexSchool">
 <meta property="article:tag" content="Video">
+<meta property="article:tag" content="HexSchool">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://gizelliang.github.io/2024/05/22/arrowFunction/">
@@ -199,7 +199,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-05-24 10:30:30" itemprop="dateModified" datetime="2024-05-24T10:30:30+08:00">2024-05-24</time>
+                <time title="Modified: 2024-05-24 11:10:25" itemprop="dateModified" datetime="2024-05-24T11:10:25+08:00">2024-05-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -247,11 +247,7 @@
 <li>如果只有一個參數，可以省略括號<br>多行程式碼的話，大括號就不可省略<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">numberA</span> = x=&gt;&#123; <span class="keyword">return</span> x*x&#125;;</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">numberB</span> = x=&gt; x*x*x;</span><br></pre></td></tr></table></figure></li>
 <li>沒有參數，還是要有空括號<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">numberA</span> = (<span class="params"></span>)=&gt;&#123; <span class="keyword">return</span> x*x&#125;;</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">numberB</span> = (<span class="params"></span>)=&gt; x*x*x;</span><br></pre></td></tr></table></figure></li>
 </ol>
-<pre class="mermaid">graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;</pre>
+
     </div>
 
     
@@ -260,8 +256,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/HexSchool/" rel="tag"># HexSchool</a>
               <a href="/tags/Video/" rel="tag"># Video</a>
+              <a href="/tags/HexSchool/" rel="tag"># HexSchool</a>
           </div>
 
         
@@ -273,7 +269,10 @@
     <a href="/2024/05/21/selector1/" rel="prev" title="Amos_Basic Selector">
       <i class="fa fa-chevron-left"></i> Amos_Basic Selector
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2024/05/24/ajax/" rel="next" title="ajax">
+      ajax <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -353,20 +352,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -402,12 +401,6 @@
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
 
-# mermaid chart
-mermaid: ## mermaid url https://github.com/knsv/mermaid
-  enable: true  # default true
-  version: "7.1.2" # default v7.1.2
-  options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
-    #startOnload: true  // default true
 
         
 
@@ -454,6 +447,19 @@ mermaid: ## mermaid url https://github.com/knsv/mermaid
 
 
 
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'neutral',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
 
 
   
